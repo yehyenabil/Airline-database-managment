@@ -1,4 +1,6 @@
-airline database schema and python implemantation  to manage and manipulate database and apply some analytics.
+airline database schema and python implemantation  to manage and manipulate database and apply some 
+analytics.
+
 File list:
 views.py: the python code
 erd.pnd:database schema
