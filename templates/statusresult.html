@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>StatusResult</title>
+    </head>
+    
+    <body>
+        <h1>Here is the result for flight status</h1>
+        <br><a href="/">Search again</a>
+        <div>
+            <table>
+                <th>airline_name</th>
+                <th>flight_num</th>
+                <th>status</th>
+                <th>departure_time</th>
+                <th>arrival_time</th>
+    
+            {% for line in results %}
+                <tr>
+                    <td>{{line[0]}}</td>
+                    <td>{{line[1]}}</td>
+                    <td>{{line[2]}}</td>
+                    <td>{{line[3]}}</td>
+                    <td>{{line[4]}}</td>
+                </tr>
+            {% endfor %}
+            </table>
+        </div>     
+
+    </body>
+
+
+</html>

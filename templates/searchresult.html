@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>searchresult</title>
+    </head>
+    
+    <body>
+        <h1>Here is the search result:</h1>
+        <a href="/">Search again</a><br>
+        <div>
+            <table>
+                <th>airline_name</th>
+                <th>flight_num</th>
+                <th>departure_airport</th>
+                <th>departure_time</th>
+                <th>arrival_airport</th>
+                <th>arrival_time</th>
+                <th>price</th>
+                <th>status</th>
+                <th>airplane_id</th> 
+            {% for line in results %}
+                <tr>
+                    <td>{{line[0]}}</td>
+                    <td>{{line[1]}}</td>
+                    <td>{{line[2]}}</td>
+                    <td>{{line[3]}}</td>
+                    <td>{{line[4]}}</td>
+                    <td>{{line[5]}}</td>
+                    <td>{{line[6]}}</td>
+                    <td>{{line[7]}}</td>
+                    <td>{{line[8]}}</td>
+                </tr>
+            {% endfor %}
+            </table>
+        </div>
+
+       
+
+    </body>
+
+
+</html>

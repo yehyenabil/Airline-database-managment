@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>registerAgent</title>
+</head>
+<body>
+  <h1>Register as Customer</h1>
+  <a href="/">Go back</a>
+</br>
+{% if error %}
+<p class="error"><strong>Error:</strong> {{error}}</p>
+{% endif %}
+  <div>
+    <form action="/registerAuthCustomer" method="POST">
+        Email <br><input type="text" name = "username" placeholder="username" required/> </br>
+        Name <br><input type="text" name = "name" placeholder="name" required/> </br>
+        Password <br><input type="password" name = "password" placeholder="password" required/> </br>
+        Building_number <br><input type="text" name = "Building_number" placeholder="Building_number" required/> </br>
+        Street <br><input type="text" name = "street" placeholder="street" required/> </br>
+        City <br><input type="text" name = "city" placeholder="city" required/> </br>
+        State <br><input type="text" name = "state" placeholder="state" required/> </br>
+        Phone_number <br><input type="text" name = "phone_number" placeholder="phone_number" required/> </br>
+        Passport_number <br><input type="text" name = "passport_number" placeholder="passport_number" required/> </br>
+        Passport_expiration <br><input type="text" name = "passport_expiration" placeholder="passport_expiration" required/> </br>
+        Passport_country <br><input type="text" name = "passport_country" placeholder="passport_country" required/> </br>
+        Date_of_birth <br><input type="text" name = "date_of_birth" placeholder="date_of_birth" required/> </br>
+        <input type="submit" value = Register />
+      </form>
+      
+  </div>
+
+
+</body>
+</html>

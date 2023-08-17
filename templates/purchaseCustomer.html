@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>purchaseCustomer</title>
+</head>
+
+
+<body>
+<h1>Purchase New Ticket</h1>
+<a href="/homeCustomer">Go back to my homepage</a>
+
+
+
+<h3>3. Choose your flight</h3>
+<div>
+    <form action="/homeCustomer/purchaseCustomer" method="POST">
+        Airline Name <br><input type="text" name = "airline_name" placeholder="airline_name" required><br>
+        Flight Number <br><input type="text" name = "flight_num" placeholder="flight_num" required> <br>
+        <input type="submit" value = Purchase />
+    </form>
+    
+    {% if purchaseError %}
+         <p class="error"><strong>Error:</strong> {{purchaseError}}</p>
+    {% endif %}
+</div>
+
+
+</body>
+</html>

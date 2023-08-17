@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+  <h1>Login</h1>
+  <a href="/">Go back</a>
+</br>
+{% if error %}
+<p class="error"><strong>Error:</strong> {{error}}</p>
+{% endif %}
+  <div>
+    <form action="/loginAuth" method="POST">
+        User Type: <input type='radio' name='usrtype' value='customer'/> customer 
+        <input type='radio' name='usrtype' value='staff'/> staff
+        <input type='radio' name='usrtype' value='agent'/> agent
+        <br />
+        Email <br><input type="text" name = "username" placeholder="username" required/> </br>
+        Password <br><input type="password" name = "password" placeholder="password" required/> </br>
+        <input type="submit" value='Login'/>
+      </form>
+      
+  </div>
+
+
+</body>
+</html>
+

@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="utf-8"> 
+        <title>AddAirplaneResult</title> 
+    </head>
+    <body>
+        
+        <h2>Here is the airplane owned by your airline</h2>
+        <div>
+            <table>
+                <th>airline_name</th>
+                <th>airplane_id</th>
+                <th>seats</th>
+                
+            {% for line in results %}
+                <tr>
+                    <td>{{line[0]}}</td>
+                    <td>{{line[1]}}</td>
+                    <td>{{line[2]}}</td>
+                </tr>
+            {% endfor %}
+            </table></br>
+        </div>
+
+        <a href="/staffHome">Back to Home</a>
+
+    </body>
+</html>

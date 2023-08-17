@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>StaffHome</title> 
+    <div>
+        <h1>Welcome! {{username}}!</h1>
+    </div>
+</head>
+
+<body>
+
+<h1>View Flights</h1>
+
+
+</br>{% if error %}
+    <p class="error"><strong>Error:</strong> {{error}}</p>
+{% endif %}
+
+<ul>
+    <li>
+        <a href="/staffHome">Refresh the search result</a>
+    </li>
+    <li><a href="/staffHome/addAirplane">Add Airplane</a></li>
+    <li><a href="/staffHome/addAirport">Add Airport</a></li>
+ <li style="float:right"><a href="/logout"> Logout</a></li>
+
+</ul>
+
+
+
+
+
+
+</body>

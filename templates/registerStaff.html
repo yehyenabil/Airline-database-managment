@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>registerAgent</title>
+</head>
+<body>
+  <h1>Register as Staff</h1>
+  <a href="/">Go back</a>
+</br>
+{% if error %}
+<p class="error"><strong>Error:</strong> {{error}}</p>
+{% endif %}
+  <div>
+    <form action="/registerAuthStaff" method="POST">
+        Email <br><input type="text" name = "username" placeholder="username" required/> </br>
+        Password <br><input type="password" name = "password" placeholder="password" required/> </br>
+        First_name <br><input type="text" name = "first_name" placeholder="first_name" required/> </br>
+        Last_name <br><input type="text" name = "last_name" placeholder="last_name" required/> </br>
+        Date_of_birth <br><input type="text" name = "date_of_birth" placeholder="date_of_birth" required/> </br>
+        Airline_name <br><input type="text" name = "airline_name" placeholder="airline_name" required/> </br>
+        <input type="submit" value = Register />
+      </form>
+      
+  </div>
+  
+</body>
+</html>

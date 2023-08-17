@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>airline booking system</title>
+</head>
+<body>
+    <ul>
+        <li id='Travel'>
+            <a href="/">Home Page</a>
+        </li>
+        <li style="float:right" id='login'>
+            <a href="/login">Login</a>
+        </li>
+        <li style="float:right" class='dropdown'>
+            <a href="javascript:void(0)" class="dropbtn">Register</a>
+            <div class="dropdown-content">
+                <a href="/registerCustomer">Customer</a>
+                <a href="/registerAgent">Agent</a>
+                <a href="/registerStaff">Staff</a>
+            </div>
+        </li>
+    </ul>
+
+    <h1>PUBLIC SEARCH</h1>
+    
+    <div> 
+        {% if error %}
+        <p class="error"><strong>Error:</strong> {{error}}</p>
+        {% endif %}
+      <div class="box1 shadow"></div>
+        <form action="/searchresult/flight" method="POST">
+            <h2 style="left: 95px; position: absolute; top: 190px;">Please input following information to travel</h2></br>
+            <b style="left: 100px; position: absolute; top: 270px;">Departure City/Airport(either):</b></br>
+            <input style="left: 100px; position: absolute; top: 290px;" type="text" name = "departurecity" placeholder="enter departure city/airport" required/></br>
+            <b style="left: 100px; position: absolute; top: 360px;">Arrival City/Airport(either):</b></br>
+            <input style="left: 100px; position: absolute; top: 380px;" type="text" name = "arrivalcity" placeholder="enter arrival city/airport" required/></br>
+            <b style="left: 100px; position: absolute; top: 450px;">Departure Date:</b></br>
+            <input style="left: 100px; position: absolute; top: 470px;" type="date" name="departuredate" step=1 required/> </br>
+            <input style="left: 100px; position: absolute; top: 540px;" type="submit" value = Search />
+        </form>
+
+      <div class="box2 shadow"></div>
+        <form action="/searchresult/status" method="POST">
+            <h2 style="left: 800px; position: absolute; top: 190px;">Please input your flight number and <br>arrival/departure date to see the flight status</h2></br>
+            <b style="left: 805px; position: absolute; top: 270px;">Flight number:</b></br>
+            <input style="left: 805px; position: absolute; top: 290px;" type="text" name = "flightnumberbox" placeholder="enter the flight number" required/> </br>
+            <b style="left: 805px; position: absolute; top: 360px;">Departure/Arrival date:</b></br>
+            <input style="left: 805px; position: absolute; top: 380px;" type="date" name="doradate" step=1 required/> </br>
+            <input style="left: 805px; position: absolute; top: 450px;" type="submit" value = Search />
+        </form>
+    </div>
+    
+</body>
+
+</html>
